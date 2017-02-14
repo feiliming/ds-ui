@@ -1,0 +1,50 @@
+//导航背景颜色
+@ds-nav-bg-color: #343d46;
+
+.ds-nav {
+  list-style:none;
+  font-size: 14px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  //width: 200px;
+  li {
+    float: left;
+    position: relative;
+    a {
+      display: block;
+      color: #c2c2c2;
+      cursor: pointer;
+      line-height: 60px;
+      background-color: @ds-nav-bg-color;
+      padding: 0 20px;
+      text-decoration: none;
+      text-align: center;
+      //transition: all .3s;
+      &:hover {
+        color: #fff;
+      }
+    }
+    &:after {
+      position: absolute;
+      content: '';
+      top: auto;
+      bottom: 0;
+      //left: 50%;
+      width: 0;
+      height: 5px;
+      background-color: #5FB878;
+      transition: all .4s ease;
+      opacity: 0.4;
+    }
+    //一个冒号伪类 两个冒号伪元素?好像一样呢 http://blog.dimpurr.com/css-before-after/
+    &:hover::after{
+      content: ''; top: auto; bottom: 0; width: 100%; opacity: 1;
+    }
+
+  }
+  .ds-nav-active {
+    a {color: #fff;}
+    &:after {content: ''; top: auto; bottom: 0; width: 100%; opacity: 1;}
+  }
+}
