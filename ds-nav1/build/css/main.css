@@ -1,0 +1,55 @@
+.ds-nav {
+  list-style: none;
+  font-size: 14px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.ds-nav li {
+  float: left;
+  position: relative;
+}
+.ds-nav li a {
+  display: block;
+  color: #c2c2c2;
+  cursor: pointer;
+  line-height: 60px;
+  background-color: #343d46;
+  padding: 0 20px;
+  text-decoration: none;
+  text-align: center;
+}
+.ds-nav li a:hover {
+  color: #fff;
+}
+.ds-nav li:after {
+  position: absolute;
+  content: '';
+  top: auto;
+  bottom: 0;
+  width: 0;
+  height: 5px;
+  background-color: #5FB878;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+  opacity: 0.4;
+}
+.ds-nav li:hover::after {
+  content: '';
+  top: auto;
+  bottom: 0;
+  width: 100%;
+  opacity: 1;
+}
+.ds-nav .ds-nav-active a {
+  color: #fff;
+}
+.ds-nav .ds-nav-active:after {
+  content: '';
+  top: auto;
+  bottom: 0;
+  width: 100%;
+  opacity: 1;
+}
+
+/*# sourceMappingURL=main.css.map*/
